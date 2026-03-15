@@ -29,7 +29,7 @@ export class ManagementComponent {
     { label: 'Container Id', key: 'id' },
     { label: 'Waste Type', key: 'wasteType' },
     { label: 'Capacity', key: 'capacityKg' },
-    { label: 'CurrentFillLevel', key: 'currentFillLevelKg' },
+    { label: 'Current Fill Level', key: 'currentFillLevelKg' },
   ]);
 
   constructor() {
