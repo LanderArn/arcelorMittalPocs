@@ -41,6 +41,6 @@ export class AddComponent {
   }
 
   wasteTypeChange(event: any) {
-    this.containerModel.update(model => ({ ...model, wasteType: event.value }));
+    this.containerModel.update(model => ({ ...model, wasteType: event }));
   }
 }
