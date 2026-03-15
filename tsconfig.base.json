@@ -4,7 +4,7 @@
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@arcelor-mittal-pocs/shared": ["libs/shared/src/index.ts"],
+      "@arcelor-mittal-pocs/management": ["libs/management/src/index.ts"],
+      "@arcelor-mittal-pocs/ui-kit": ["libs/ui-kit/src/index.ts"],
+      "@arcelor-mittal-pocs/containers": ["libs/containers/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

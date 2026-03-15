@@ -1,0 +1,38 @@
+<form
+  (submit)="createContainer()"
+  class="flex flex-column gap-3"
+>
+  <div class="field">
+    <label class="mr-3">Waste Type</label>
+    <p-select
+      [options]="wasteTypes"
+      optionLabel="label"
+      optionValue="value"
+      [ngModel]="containerModel().wasteType"
+      [ngModelOptions]="{ standalone: true }"
+      (ngModelChange)="wasteTypeChange($event)"
+    ></p-select>
+  </div>
+
+  <div class="field">
+    <label class="mr-3">Location</label>
+    <input pInputText type="text" [formField]="containerForm.location" />
+  </div>
+
+  <div class="field">
+    <label class="mr-3">Capacity (Kg)</label>
+
+    <input pInputText type="number" [formField]="containerForm.capacityKg" />
+  </div>
+
+  <div class="field">
+    <label class="mr-3">Current Fill Level (Kg)</label>
+    <input
+      pInputText
+      type="number"
+      [formField]="containerForm.currentFillLevelKg"
+    />
+  </div>
+
+  <button pButton type="submit" label="Create Container"></button>
+</form>

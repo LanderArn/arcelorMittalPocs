@@ -1,0 +1,11 @@
+@if (containers().data.length) {
+  <am-table [data]="containers().data" [columns]="columns()" />
+} @else {
+  <p>No containers found.</p>
+}
+
+@if(containers().loading) {
+  <p>Loading containers...</p>
+}
+
+<p-button label="Add Container" styleClass="mt-3"/>
