@@ -5,6 +5,7 @@ import {
   inject,
 } from '@angular/core';
 
+import { RouterLink } from '@angular/router';
 import { ManagementFacade } from './management.facade';
 import { ManagementStore } from './management.store';
 import { TableModule } from 'primeng/table';
@@ -15,7 +16,7 @@ import { ApiService } from '@arcelor-mittal-pocs/shared';
 
 @Component({
   selector: 'management',
-  imports: [ButtonModule, TableModule, AmTableComponent],
+  imports: [ButtonModule, TableModule, AmTableComponent, RouterLink],
   templateUrl: './management.component.html',
   styleUrls: ['./management.component.scss'],
   providers: [ManagementFacade, ManagementStore, ApiService],

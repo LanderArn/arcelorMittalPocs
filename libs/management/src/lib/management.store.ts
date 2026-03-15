@@ -4,8 +4,8 @@ import {
 } from '@arcelor-mittal-pocs/shared';
 import { signalStore, withState } from '@ngrx/signals';
 import { Container } from '../../../containers/src/lib/types/containers.types';
-
 import { withContainers } from '@arcelor-mittal-pocs/containers';
+import { withWaste } from '@arcelor-mittal-pocs/waste';
 
 const initialState: ManagementState = {
   containers: DEFAULT_LIST_STATE,
@@ -18,4 +18,5 @@ export type ManagementState = {
 export const ManagementStore = signalStore(
   withState(initialState),
   withContainers(),
+  withWaste()
 );

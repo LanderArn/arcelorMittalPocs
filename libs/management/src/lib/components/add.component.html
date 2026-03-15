@@ -1,17 +1,17 @@
-<form
-  (submit)="createContainer()"
-  class="flex flex-column gap-3"
->
+<form (submit)="createContainer()" class="flex flex-column gap-3">
   <div class="field">
     <label class="mr-3">Waste Type</label>
-    <p-select
-      [options]="wasteTypes"
-      optionLabel="label"
-      optionValue="value"
-      [ngModel]="containerModel().wasteType"
-      [ngModelOptions]="{ standalone: true }"
-      (ngModelChange)="wasteTypeChange($event)"
-    ></p-select>
+
+    @if (wasteTypesOptions().length > 0) {
+      <p-select
+        [options]="wasteTypesOptions()"
+        optionLabel="label"
+        optionValue="value"
+        [ngModel]="containerModel().wasteType"
+        [ngModelOptions]="{ standalone: true }"
+        (ngModelChange)="wasteTypeChange($event)"
+      ></p-select>
+    } 
   </div>
 
   <div class="field">
@@ -34,5 +34,10 @@
     />
   </div>
 
-  <button pButton type="submit" label="Create Container"></button>
+  <button
+    pButton
+    type="submit"
+    label="Create Container"
+    style="width: 200px"
+  ></button>
 </form>
